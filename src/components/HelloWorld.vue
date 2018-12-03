@@ -1,34 +1,31 @@
 <template>
-  <div class="hello">
-   Hey there!
+  <div>
+    <h1>Fundamental-Vue</h1>
+    <FdButton @click="showModal">Show Modal</FdButton>
+    <FdModal title="Modal Title" :active.sync="isModalActive">
+      <p>Do you want to invite your friends to join the party?</p>
+      <template slot="actions">
+        <FdButton @click="closeModal" styling="light">Cancel</FdButton>
+        <FdButton @click="closeModal" styling="emphasized">Invite Friends</FdButton>
+      </template>
+    </FdModal>
   </div>
 </template>
 
 <script>
-import TsxComponent from '@/vue-tsx';
-import { Button } from '../../node_modules/fundamental-vue/src/components/Button/Button.tsx'
 export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  }
-}
+  data() {
+    return {
+      isModalActive: false,
+    };
+  },
+  methods: {
+    closeModal() {
+      this.isModalActive = false;
+    },
+    showModal() {
+      this.isModalActive = true;
+    },
+  },
+};
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-</style>
