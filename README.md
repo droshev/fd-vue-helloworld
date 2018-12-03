@@ -24,3 +24,5 @@ npm run build
 npm install -g serve
 serve -s dist
 ```
+
+Source: https://cli.vuejs.org/guide/deployment.html#general-guidelines
