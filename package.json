@@ -8,6 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "fundamental-vue": "0.0.3-beta",
     "vue": "^2.5.17"
   },
   "devDependencies": {
