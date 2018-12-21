@@ -3,6 +3,7 @@
 ## Project setup
 
 ```
+npm install -g serve
 npm install
 ```
 
@@ -21,7 +22,6 @@ npm run build
 ### Run it productively
 
 ```
-npm install -g serve
 serve -s dist
 ```
 
