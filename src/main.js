@@ -4,7 +4,7 @@ import VueRouter from 'vue-router';
 import FundamentalVue from 'fundamental-vue';
 import ourRoutes from './our-routes.js';
 
-require('fiori-fundamentals/dist/all.min.css');
+require('fiori-fundamentals/dist/fiori-fundamentals.min.css');
 
 Vue.use(FundamentalVue);
 Vue.use(VueRouter);
